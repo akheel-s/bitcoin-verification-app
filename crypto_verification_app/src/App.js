@@ -2,15 +2,9 @@ import React, { Component } from "react";
 import "./App.css";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.css";
-import TextField from "@mui/material/TextField";
-import AdapterDateFns from "@mui/lab/AdapterDateFns";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
-import DatePicker from "@mui/lab/DatePicker";
-import MobileDatePicker from "@mui/lab/MobileDatePicker";
 
 class App extends Component {
   constructor(props) {
@@ -68,9 +62,11 @@ class App extends Component {
 
     return (
       <div classname="main">
-        <div>
+        <img src="random.jpg" alt="" />
+        <div className>
           <h1 className="title">Template</h1>
         </div>
+
         <div className="content">
           <Form>
             <Form.Row>
@@ -146,3 +142,4 @@ class App extends Component {
 }
 
 export default App;
+
