@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import "./App.css";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
@@ -6,11 +6,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.css";
-import TextField from "@mui/material/TextField";
-import AdapterDateFns from "@mui/lab/AdapterDateFns";
-import LocalizationProvider from "@mui/lab/LocalizationProvider";
-import DatePicker from "@mui/lab/DatePicker";
-import MobileDatePicker from "@mui/lab/MobileDatePicker";
+import Modal from "react-bootstrap/Modal";
 
 class App extends Component {
   constructor(props) {
@@ -18,6 +14,8 @@ class App extends Component {
 
     this.state = {
       isLoading: false,
+      setShow: false,
+
       formData: {
         address: "",
         date: "",
@@ -26,6 +24,42 @@ class App extends Component {
       result: "",
     };
   }
+
+  // MyVerticallyCenteredModal = (props) => {
+  //   return (
+  //     <Modal
+  //       {...props}
+  //       size="lg"
+  //       aria-labelledby="contained-modal-title-vcenter"
+  //       centered
+  //     >
+  //       <Modal.Header closeButton>
+  //         <Modal.Title id="contained-modal-title-vcenter">
+  //           Modal heading
+  //         </Modal.Title>
+  //       </Modal.Header>
+  //       <Modal.Body>
+  //         <h4>Centered Modal</h4>
+  //         <p>
+  //           Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+  //           dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
+  //           ac consectetur ac, vestibulum at eros.
+  //         </p>
+  //       </Modal.Body>
+  //       <Modal.Footer>
+  //         <Button onClick={props.onHide}>Close</Button>
+  //       </Modal.Footer>
+  //     </Modal>
+  //   );
+  // };
+
+  handleClose = (event) => {
+    this.setState({ setShow: false });
+  };
+
+  handleShow = (event) => {
+    this.setState({ setShow: true });
+  };
 
   handleChange = (event) => {
     const value = event.target.value;
@@ -65,9 +99,15 @@ class App extends Component {
     const isLoading = this.state.isLoading;
     const formData = this.state.formData;
     const result = this.state.result;
+    const setShow = this.state.setShow;
+
+    // const [show, setShow] = this.state.useState(false);
+
+    // const handleClose = () => setShow(false);
+    // const handleShow = () => this.state.setShow(true);
 
     return (
-      <div classname="main">
+      <div className="main">
         <div>
           <h1 className="title">Template</h1>
         </div>
@@ -140,9 +180,27 @@ class App extends Component {
             </Row>
           )}
         </div>
+        <div className="about_us">
+          <Button
+            variant="outline-primary"
+            className="rounded-pill"
+            onClick={this.handleShow}
+          >
+            About the Team
+          </Button>
+          <Modal show={setShow} onHide={this.handleClose} animation={true}>
+            <Modal.Header closeButton>
+              <Modal.Title>About Us!</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Bharadwaj has a weird paneer addiction.</Modal.Body>
+            <Modal.Body>Rohit eats a lot of biryani.</Modal.Body>
+            <Modal.Body>Akheel likes food truck food too much.</Modal.Body>
+            <Modal.Body>Simran throws up when she sees Siva.</Modal.Body>
+            <Modal.Footer></Modal.Footer>
+          </Modal>
+        </div>
       </div>
     );
   }
 }
-
 export default App;
