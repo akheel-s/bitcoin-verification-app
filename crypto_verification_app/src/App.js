@@ -6,6 +6,11 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.css";
+import TextField from "@mui/material/TextField";
+import AdapterDateFns from "@mui/lab/AdapterDateFns";
+import LocalizationProvider from "@mui/lab/LocalizationProvider";
+import DatePicker from "@mui/lab/DatePicker";
+import MobileDatePicker from "@mui/lab/MobileDatePicker";
 
 class App extends Component {
   constructor(props) {
@@ -14,11 +19,9 @@ class App extends Component {
     this.state = {
       isLoading: false,
       formData: {
-        textfield1: "",
-        textfield2: "",
-        select1: 1,
-        select2: 1,
-        select3: 1,
+        address: "",
+        date: "",
+        amount: "",
       },
       result: "",
     };
@@ -64,7 +67,7 @@ class App extends Component {
     const result = this.state.result;
 
     return (
-      <Container>
+      <div classname="main">
         <div>
           <h1 className="title">Template</h1>
         </div>
@@ -72,68 +75,38 @@ class App extends Component {
           <Form>
             <Form.Row>
               <Form.Group as={Col}>
-                <Form.Label>Text Field 1</Form.Label>
+                <Form.Label>Bitcoin Address</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="Text Field 1"
-                  name="textfield1"
-                  value={formData.textfield1}
-                  onChange={this.handleChange}
-                />
-              </Form.Group>
-              <Form.Group as={Col}>
-                <Form.Label>Text Field 2</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Text Field 2"
-                  name="textfield2"
-                  value={formData.textfield2}
+                  placeholder="Ex: 36FDGSdSFr5EWYCAo8ymCTm9ktTUB9kYEp"
+                  name="address"
+                  value={formData.address}
                   onChange={this.handleChange}
                 />
               </Form.Group>
             </Form.Row>
             <Form.Row>
               <Form.Group as={Col}>
-                <Form.Label>Select 1</Form.Label>
+                <Form.Label>Date of Transaction</Form.Label>
                 <Form.Control
-                  as="select"
-                  value={formData.select1}
-                  name="select1"
+                  type="text"
+                  placeholder="Ex: 03/04/2022"
+                  name="date"
+                  value={formData.date}
                   onChange={this.handleChange}
-                >
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                </Form.Control>
+                />
               </Form.Group>
+            </Form.Row>
+            <Form.Row>
               <Form.Group as={Col}>
-                <Form.Label>Select 2</Form.Label>
+                <Form.Label>Transaction Amount</Form.Label>
                 <Form.Control
-                  as="select"
-                  value={formData.select2}
-                  name="select2"
+                  type="text"
+                  placeholder="Ex: 0.12345678"
+                  name="amount"
+                  value={formData.amount}
                   onChange={this.handleChange}
-                >
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                </Form.Control>
-              </Form.Group>
-              <Form.Group as={Col}>
-                <Form.Label>Select 3</Form.Label>
-                <Form.Control
-                  as="select"
-                  value={formData.select3}
-                  name="select3"
-                  onChange={this.handleChange}
-                >
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                </Form.Control>
+                />
               </Form.Group>
             </Form.Row>
             <Row>
@@ -167,7 +140,7 @@ class App extends Component {
             </Row>
           )}
         </div>
-      </Container>
+      </div>
     );
   }
 }
