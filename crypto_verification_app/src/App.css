@@ -1,4 +1,8 @@
-html,
+html {
+  height: 100%;
+  background-color: white;
+}
+
 body {
   background-color: white;
   background-image: url(random.jpeg), url(random2.jpeg);
@@ -23,6 +27,7 @@ body {
 /* } */
 
 .content {
+  background-color: white;
   margin: left;
   margin-top: 20px;
   width: 40%;
@@ -30,6 +35,18 @@ body {
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
+  opacity: 1;
+}
+content:hover {
+  content: "";
+  background-color: white;
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }
 
 .about-us {
@@ -37,13 +54,27 @@ body {
 }
 
 .title {
+  background-image: url("./random.jpeg");
+  background-size: 51.5% 100%;
+  background-repeat: repeat-y;
   padding-top: 100px;
   text-align: center;
   text-transform: uppercase;
   font-weight: 600;
   font-size: 4em;
   letter-spacing: 0.15rem;
-  color: #fff;
+  color: black;
+  opacity: 50%;
+}
+.title:hover {
+  padding-top: 100px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 4em;
+  letter-spacing: 0.15rem;
+  color: black;
+  opacity: 100%;
 }
 
 label {

@@ -2,7 +2,6 @@ import React, { Component, useState } from "react";
 import "./App.css";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
-import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.css";
@@ -111,6 +110,7 @@ class App extends Component {
         <div>
           <h1 className="title">Template</h1>
         </div>
+
         <div className="content">
           <Form>
             <Form.Row>
