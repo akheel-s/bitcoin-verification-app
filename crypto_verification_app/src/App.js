@@ -6,6 +6,7 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.css";
 import Modal from "react-bootstrap/Modal";
+import { MDBInput } from "mdbreact";
 
 class App extends Component {
   constructor(props) {
@@ -106,19 +107,20 @@ class App extends Component {
     // const handleShow = () => this.state.setShow(true);
 
     return (
-      <div className="main">
+      <div>
         <div>
-          <h1 className="title">Template</h1>
+          <h1 className="title">Safe Crypto</h1>
         </div>
 
         <div className="content">
           <Form>
             <Form.Row>
               <Form.Group as={Col}>
-                <Form.Label>Bitcoin Address</Form.Label>
+                {/* <Form.Label>Bitcoin Address</Form.Label> */}
                 <Form.Control
+                  className="border border-5 transp"
                   type="text"
-                  placeholder="Ex: 36FDGSdSFr5EWYCAo8ymCTm9ktTUB9kYEp"
+                  placeholder="BITCOIN ADDRESS"
                   name="address"
                   value={formData.address}
                   onChange={this.handleChange}
@@ -127,10 +129,11 @@ class App extends Component {
             </Form.Row>
             <Form.Row>
               <Form.Group as={Col}>
-                <Form.Label>Date of Transaction</Form.Label>
+                {/* <Form.Label>Date of Transaction</Form.Label> */}
                 <Form.Control
+                  className="border border-5 transp"
                   type="text"
-                  placeholder="Ex: 03/04/2022"
+                  placeholder="DATE"
                   name="date"
                   value={formData.date}
                   onChange={this.handleChange}
@@ -139,10 +142,11 @@ class App extends Component {
             </Form.Row>
             <Form.Row>
               <Form.Group as={Col}>
-                <Form.Label>Transaction Amount</Form.Label>
+                {/* <Form.Label>Transaction Amount</Form.Label> */}
                 <Form.Control
+                  className="border border-5 transp"
                   type="text"
-                  placeholder="Ex: 0.12345678"
+                  placeholder="AMOUNT"
                   name="amount"
                   value={formData.amount}
                   onChange={this.handleChange}
@@ -153,21 +157,23 @@ class App extends Component {
               <Col>
                 <Button
                   block
+                  className="finalbutton"
                   variant="success"
                   disabled={isLoading}
                   onClick={!isLoading ? this.handlePredictClick : null}
                 >
-                  {isLoading ? "Making prediction" : "Predict"}
+                  {isLoading ? "Making prediction" : "Verify"}
                 </Button>
               </Col>
               <Col>
                 <Button
+                  className="finalbutton"
                   block
-                  variant="danger"
+                  // variant="danger"
                   disabled={isLoading}
                   onClick={this.handleCancelClick}
                 >
-                  Reset prediction
+                  Reset
                 </Button>
               </Col>
             </Row>
@@ -180,13 +186,13 @@ class App extends Component {
             </Row>
           )}
         </div>
-        <div className="about_us">
+        <div className="about">
           <Button
             variant="outline-primary"
-            className="rounded-pill"
+            className="border border-light"
             onClick={this.handleShow}
           >
-            About the Team
+            About Us
           </Button>
           <Modal show={setShow} onHide={this.handleClose} animation={true}>
             <Modal.Header closeButton>

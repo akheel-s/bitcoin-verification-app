@@ -5,16 +5,28 @@ html {
 
 body {
   background-color: white;
-  background-image: url(random.jpeg), url(random2.jpeg);
-  background-size: 50% 100%;
-  background-position: left, right;
-  background-repeat: no-repeat, no-repeat;
+  background-image: url(pic7.jpg);
+  background-size: 100% 105%;
+  background-repeat: repeat-y;
+
+  /* background-position: left, right;
+  /* background-repeat: no-repeat; */
   /* color: black; */
   height: 100%;
   width: 100%;
-  opacity: 70%;
 }
 
+.transp {
+  background-color: transparent !important;
+}
+
+.finalbutton {
+  background-color: rgb(100, 12, 182) !important;
+}
+
+#parent input {
+  border: 0;
+}
 /* body:hover {
   background-color: white;
   background-image: url(random.jpeg);
@@ -27,12 +39,13 @@ body {
 /* } */
 
 .content {
-  background-color: white;
+  /* background-color: white; */
   margin: left;
-  margin-top: 20px;
-  width: 40%;
+  margin-left: 10%;
+  margin-top: 12%;
+  width: 28%;
   height: auto;
-  background-color: #fff;
+  /* background-color: #fff; */
   padding: 20px;
   border-radius: 8px;
   opacity: 1;
@@ -49,14 +62,16 @@ content:hover {
   z-index: -1;
 }
 
-.about-us {
-  display: inline;
+.about {
+  margin-left: 20%;
+  margin-top: 1%;
+  color: black;
 }
 
 .title {
-  background-image: url("./random.jpeg");
-  background-size: 51.5% 100%;
-  background-repeat: repeat-y;
+  /* background-image: url("./random.jpeg"); */
+  /* background-size: 51.5% 100%; */
+  /* background-repeat: repeat-y; */
   padding-top: 100px;
   text-align: center;
   text-transform: uppercase;
