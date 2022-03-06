@@ -6,7 +6,7 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.css";
 import Modal from "react-bootstrap/Modal";
-import { MDBInput } from "mdbreact";
+// import { MDBInput } from "mdbreact";
 
 class App extends Component {
   constructor(props) {
@@ -109,7 +109,8 @@ class App extends Component {
     return (
       <div>
         <div>
-          <h1 className="title">Safe Crypto</h1>
+          <h1 className="title">Safe</h1>
+          <h1 className="title1">Crypto</h1>
         </div>
 
         <div className="content">
@@ -185,25 +186,26 @@ class App extends Component {
               </Col>
             </Row>
           )}
-        </div>
-        <div className="about">
-          <Button
-            variant="outline-primary"
-            className="border border-light"
-            onClick={this.handleShow}
-          >
-            About Us
-          </Button>
-          <Modal show={setShow} onHide={this.handleClose} animation={true}>
-            <Modal.Header closeButton>
-              <Modal.Title>About Us!</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>Bharadwaj has a weird paneer addiction.</Modal.Body>
-            <Modal.Body>Rohit eats a lot of biryani.</Modal.Body>
-            <Modal.Body>Akheel likes food truck food too much.</Modal.Body>
-            <Modal.Body>Simran throws up when she sees Siva.</Modal.Body>
-            <Modal.Footer></Modal.Footer>
-          </Modal>
+          <div className="about">
+            <Button
+              block
+              variant="flat"
+              className="border border-light"
+              onClick={this.handleShow}
+            >
+              ABOUT US
+            </Button>
+            <Modal show={setShow} onHide={this.handleClose} animation={true}>
+              <Modal.Header closeButton>
+                <Modal.Title>About Us!</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>Bharadwaj has a weird paneer addiction.</Modal.Body>
+              <Modal.Body>Rohit eats a lot of biryani.</Modal.Body>
+              <Modal.Body>Akheel likes food truck food too much.</Modal.Body>
+              <Modal.Body>Simran throws up when she sees Siva.</Modal.Body>
+              <Modal.Footer></Modal.Footer>
+            </Modal>
+          </div>
         </div>
       </div>
     );

@@ -22,6 +22,7 @@ body {
 
 .finalbutton {
   background-color: rgb(100, 12, 182) !important;
+  color: white;
 }
 
 #parent input {
@@ -42,18 +43,16 @@ body {
   /* background-color: white; */
   margin: left;
   margin-left: 10%;
-  margin-top: 12%;
+  margin-top: 5%;
   width: 28%;
   height: auto;
   /* background-color: #fff; */
   padding: 20px;
   border-radius: 8px;
-  opacity: 1;
 }
 content:hover {
   content: "";
   background-color: white;
-  opacity: 0.5;
   top: 0;
   left: 0;
   bottom: 0;
@@ -63,9 +62,14 @@ content:hover {
 }
 
 .about {
-  margin-left: 20%;
-  margin-top: 1%;
-  color: black;
+  margin-left: 0%;
+  margin-top: 20%;
+  border-width: 10px;
+  color: white;
+}
+
+.about:hover {
+  background-color: purple;
 }
 
 .title {
@@ -77,11 +81,25 @@ content:hover {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 4em;
-  letter-spacing: 0.15rem;
-  color: black;
-  opacity: 50%;
+  letter-spacing: 2.15rem;
+  color: white;
+  /* opacity: 80%; */
 }
-.title:hover {
+
+.title1 {
+  /* background-image: url("./random.jpeg"); */
+  /* background-size: 51.5% 100%; */
+  /* background-repeat: repeat-y; */
+  padding-top: 0%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 4em;
+  letter-spacing: 2.15rem;
+  color: white;
+  /* opacity: 80%; */
+}
+/* .title:hover {
   padding-top: 100px;
   text-align: center;
   text-transform: uppercase;
@@ -90,7 +108,7 @@ content:hover {
   letter-spacing: 0.15rem;
   color: black;
   opacity: 100%;
-}
+} */
 
 label {
   color: #333;
