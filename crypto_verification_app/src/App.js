@@ -1,4 +1,4 @@
-import React, { Component, useState } from "react";
+import React, { Component } from "react";
 import "./App.css";
 import Form from "react-bootstrap/Form";
 import Col from "react-bootstrap/Col";
@@ -6,7 +6,6 @@ import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import "bootstrap/dist/css/bootstrap.css";
 import Modal from "react-bootstrap/Modal";
-// import { MDBInput } from "mdbreact";
 
 class App extends Component {
   constructor(props) {
@@ -109,9 +108,12 @@ class App extends Component {
     return (
       <div>
         <div>
-          <h1 className="title">Safe</h1>
-          <h1 className="title1">Crypto</h1>
+          <h1 className="title">Safe Crypto</h1>
         </div>
+        <div className="pic1"></div>
+        <div className="pic2"></div>
+        <div className="pic3"></div>
+        <div className="pic4"></div>
 
         <div className="content">
           <Form>

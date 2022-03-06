@@ -5,7 +5,7 @@ html {
 
 body {
   background-color: white;
-  background-image: url(pic7.jpg);
+  background-image: url("./pic7.jpg");
   background-size: 100% 105%;
   background-repeat: repeat-y;
 
@@ -22,7 +22,6 @@ body {
 
 .finalbutton {
   background-color: rgb(100, 12, 182) !important;
-  color: white;
 }
 
 #parent input {
@@ -43,16 +42,78 @@ body {
   /* background-color: white; */
   margin: left;
   margin-left: 10%;
-  margin-top: 5%;
+  margin-top: 12%;
   width: 28%;
   height: auto;
   /* background-color: #fff; */
   padding: 20px;
   border-radius: 8px;
+  opacity: 1;
+}
+.pic1 {
+  background-image: url("./1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 7.5%;
+  height: 7.5%;
+  right: -40px;
+  top: 10%;
+  bottom: 15;
+  left: 2;
+  padding-left: 10%;
+  position: absolute;
+  margin: auto;
+  z-index: 0;
+}
+.pic2 {
+  background-image: url("./2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 10%;
+  height: 10%;
+  right: -40px;
+  top: 35%;
+  bottom: 15;
+  left: 2;
+  padding-left: 10%;
+  position: absolute;
+  margin: auto;
+  z-index: 0;
+}
+.pic3 {
+  background-image: url("./3.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 10%;
+  height: 10%;
+  right: -40px;
+  top: 60%;
+  bottom: 15;
+  left: 2;
+  padding-left: 10%;
+  position: absolute;
+  margin: auto;
+  z-index: 0;
+}
+.pic4 {
+  background-image: url("./4.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 10%;
+  height: 10%;
+  right: -40px;
+  top: 85%;
+  bottom: 15;
+  left: 2;
+  padding-left: 10%;
+  position: absolute;
+  margin: auto;
+  z-index: 0;
 }
 content:hover {
   content: "";
   background-color: white;
+  opacity: 0.5;
   top: 0;
   left: 0;
   bottom: 0;
@@ -64,12 +125,7 @@ content:hover {
 .about {
   margin-left: 0%;
   margin-top: 20%;
-  border-width: 10px;
-  color: white;
-}
-
-.about:hover {
-  background-color: purple;
+  color: black;
 }
 
 .title {
@@ -81,25 +137,11 @@ content:hover {
   text-transform: uppercase;
   font-weight: 600;
   font-size: 4em;
-  letter-spacing: 2.15rem;
-  color: white;
-  /* opacity: 80%; */
+  letter-spacing: 0.15rem;
+  color: black;
+  opacity: 50%;
 }
-
-.title1 {
-  /* background-image: url("./random.jpeg"); */
-  /* background-size: 51.5% 100%; */
-  /* background-repeat: repeat-y; */
-  padding-top: 0%;
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 4em;
-  letter-spacing: 2.15rem;
-  color: white;
-  /* opacity: 80%; */
-}
-/* .title:hover {
+.title:hover {
   padding-top: 100px;
   text-align: center;
   text-transform: uppercase;
@@ -108,7 +150,7 @@ content:hover {
   letter-spacing: 0.15rem;
   color: black;
   opacity: 100%;
-} */
+}
 
 label {
   color: #333;
