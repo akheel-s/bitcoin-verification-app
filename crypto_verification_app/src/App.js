@@ -76,12 +76,29 @@ class App extends Component {
       <div>
         <div>
           <h1 className="title">Safe </h1>
+
           <h1 className="title1"> Crypto</h1>
         </div>
-        <div className="pic1"></div>
-        <div className="pic2"></div>
-        <div className="pic3"></div>
-        <div className="pic4"></div>
+        <div className="pic1">
+          <a href="https://www.google.com/finance/quote/BTC-USD">
+            <button className="btn"></button>
+          </a>
+        </div>
+        <div className="pic2">
+          <a href="https://cointelegraph.com/tags/bitcoin">
+            <button className="btn2"></button>
+          </a>
+        </div>
+        <div className="pic3">
+          <a href="https://www.ig.com/en/bitcoin-btc/how-to-trade-bitcoin">
+            <button className="btn3"></button>
+          </a>
+        </div>
+        <div className="pic4">
+          <a href="https://www.coinbase.com/partner/bitcoin?utm_source=google_search_nb&utm_medium=cpc&utm_campaign=1658290220&utm_content=64330542701&utm_term=bitcoin%20trading&utm_creative=580598118868&utm_device=c&utm_placement=&utm_network=g&utm_location=9032268&gclid=CjwKCAiA1JGRBhBSEiwAxXblwVPWPBKWDTOjXVK0M3HJ8yQOhttL7wX71RRI1wFGE7u1AB0SeHtO5hoCzz8QAvD_BwE">
+            <button className="btn4"></button>
+          </a>
+        </div>
 
         <div className="content">
           <Form>
