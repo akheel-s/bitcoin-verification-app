@@ -24,34 +24,6 @@ class App extends Component {
     };
   }
 
-  // MyVerticallyCenteredModal = (props) => {
-  //   return (
-  //     <Modal
-  //       {...props}
-  //       size="lg"
-  //       aria-labelledby="contained-modal-title-vcenter"
-  //       centered
-  //     >
-  //       <Modal.Header closeButton>
-  //         <Modal.Title id="contained-modal-title-vcenter">
-  //           Modal heading
-  //         </Modal.Title>
-  //       </Modal.Header>
-  //       <Modal.Body>
-  //         <h4>Centered Modal</h4>
-  //         <p>
-  //           Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-  //           dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta
-  //           ac consectetur ac, vestibulum at eros.
-  //         </p>
-  //       </Modal.Body>
-  //       <Modal.Footer>
-  //         <Button onClick={props.onHide}>Close</Button>
-  //       </Modal.Footer>
-  //     </Modal>
-  //   );
-  // };
-
   handleClose = (event) => {
     this.setState({ setShow: false });
   };
@@ -100,15 +72,11 @@ class App extends Component {
     const result = this.state.result;
     const setShow = this.state.setShow;
 
-    // const [show, setShow] = this.state.useState(false);
-
-    // const handleClose = () => setShow(false);
-    // const handleShow = () => this.state.setShow(true);
-
     return (
       <div>
         <div>
-          <h1 className="title">Safe Crypto</h1>
+          <h1 className="title">Safe </h1>
+          <h1 className="title1"> Crypto</h1>
         </div>
         <div className="pic1"></div>
         <div className="pic2"></div>
