@@ -190,7 +190,7 @@ class App extends Component {
             <Button
               block
               variant="flat"
-              className="border border-light"
+              className="border border-light text-black-50"
               onClick={this.handleShow}
             >
               ABOUT US
