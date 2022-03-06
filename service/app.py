@@ -34,22 +34,17 @@ app = Api(app = flask_app,
 
 name_space = app.namespace('prediction', description='Prediction APIs')
 
-# model = app.model('Prediction params', 
-# 				  {'textField1': fields.String(required = True, 
-# 				  							   description="Text Field 1", 
-#     					  				 	   help="Text Field 1 cannot be blank"),
-# 				  'textField2': fields.String(required = True, 
-# 				  							   description="Text Field 2", 
-#     					  				 	   help="Text Field 2 cannot be blank"),
-# 				  'select1': fields.Integer(required = True, 
-# 				  							description="Select 1", 
-#     					  				 	help="Select 1 cannot be blank"),
-# 				  'select2': fields.Integer(required = True, 
-# 				  							description="Select 2", 
-#     					  				 	help="Select 2 cannot be blank"),
-# 				  'select3': fields.Integer(required = True, 
-# 				  							description="Select 3", 
-#     					  				 	help="Select 3 cannot be blank")})
+model = app.model('Prediction params', 
+				  {'textField1': fields.String(required = True, 
+				  							   description="Text Field 1", 
+    					  				 	   help="Text Field 1 cannot be blank"),
+				  'textField2': fields.String(required = True, 
+				  							   description="Text Field 2", 
+    					  				 	   help="Text Field 2 cannot be blank"),
+				  'textField3': fields.String(required = True, 
+				  							   description="Text Field 2", 
+    					  				 	   help="Text Field 2 cannot be blank"),
+				  })
 
 # classifier = joblib.load('classifier.joblib')
 
@@ -149,7 +144,7 @@ def BHC(input_address,input_date,input_amount):
 
 	data = {"address": [input_address], 
 		"date":[input_date],
-		"bitcoin":[input_amount]}
+		"bitcoin":float([input_amount])}
 
 	df = pd.DataFrame(data)
 
@@ -161,13 +156,13 @@ def BHC(input_address,input_date,input_amount):
 
 	output = model.predict(df)
 	#output = linear_clf.predict(X)
-	print(output)
+	# print(output)
 
-	if output == 1:
-		print('\033[1m' + '\Ransomware Detected' + '\033[0m')
+	# if output == 1:
+	# 	print('\033[1m' + '\Ransomware Detected' + '\033[0m')
 
-	else:
-		print('\033[1m' + '\nRansomeware Not Detected' + '\033[0m')
+	# else:
+	# 	print('\033[1m' + '\nRansomeware Not Detected' + '\033[0m')
 	return output
 
 @name_space.route("/")
@@ -180,16 +175,20 @@ class MainClass(Resource):
 		response.headers.add('Access-Control-Allow-Methods', "*")
 		return response
 
-	@app.expect(BHC)	
+	@app.expect(model)	
 	def post(self):
 		try: 
 			formData = request.json
 			data = [val for val in formData.values()]
+			input_address = data[0]
+			input_date = data[1]
+			input_amount = data[2]
+			output = BHC(input_address,input_date,input_amount)
 			# prediction = classifier.predict(data)
 			response = jsonify({
 				"statusCode": 200,
 				"status": "Prediction made",
-				"result": "Prediction: " + str(BHC(data))
+				"result": output
 				})
 			response.headers.add('Access-Control-Allow-Origin', '*')
 			return response
