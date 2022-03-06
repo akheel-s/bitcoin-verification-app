@@ -169,7 +169,13 @@ class App extends Component {
           {result === "" ? null : (
             <Row>
               <Col className="result-container">
-                <h5 id="result">{result}</h5>
+                <h5 id="result">
+                  {this.state.value === { result } ? (
+                    <p>"Scam not detected"</p>
+                  ) : (
+                    "Scam not detected"
+                  )}
+                </h5>
               </Col>
             </Row>
           )}
