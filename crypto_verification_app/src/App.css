@@ -5,7 +5,7 @@ html {
 
 body {
   background-color: white;
-  background-image: url("./pic7.jpeg");
+  background-image: url("./pic7.jpg");
   background-size: 100% 105%;
   background-repeat: repeat-y;
 
@@ -310,4 +310,3 @@ label {
 #result {
   color: #000;
 }
-

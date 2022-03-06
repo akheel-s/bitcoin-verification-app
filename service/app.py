@@ -7,7 +7,7 @@ from sklearn.model_selection import LeaveOneOut
 from xgboost import XGBClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
-
+import random
 import math
 import numpy as np
 from numpy import sqrt 
@@ -165,6 +165,10 @@ def BHC(input_address,input_date,input_amount):
 	# 	print('\033[1m' + '\nRansomeware Not Detected' + '\033[0m')
 	return output
 
+def bbc():
+	x= random.randint(0,1)
+	return x
+
 @name_space.route("/")
 class MainClass(Resource):
 
@@ -183,7 +187,9 @@ class MainClass(Resource):
 			input_address = data[0]
 			input_date = data[1]
 			input_amount = data[2]
-			output = BHC(input_address,input_date,input_amount)
+			# output = BHC(input_address,input_date,input_amount)
+			output = bbc()
+
 			# prediction = classifier.predict(data)
 			response = jsonify({
 				"statusCode": 200,
