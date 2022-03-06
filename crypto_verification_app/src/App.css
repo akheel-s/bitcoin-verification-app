@@ -5,7 +5,7 @@ html {
 
 body {
   background-color: white;
-  background-image: url("./pic7.jpg");
+  background-image: url("./pic7.jpeg");
   background-size: 100% 105%;
   background-repeat: repeat-y;
 
@@ -14,6 +14,10 @@ body {
   /* color: black; */
   height: 100%;
   width: 100%;
+}
+@font-face {
+  font-family: "'Bebas Neue', cursive;";
+  src: url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 }
 
 .transp {
@@ -56,7 +60,7 @@ body {
   background-size: contain;
   width: 7.5%;
   height: 7.5%;
-  right: -40px;
+  right: -50px;
   top: 10%;
   bottom: 15;
   left: 2;
@@ -110,6 +114,127 @@ body {
   margin: auto;
   z-index: 0;
 }
+.pic1 .btn {
+  position: absolute;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  float: right;
+  top: 0px;
+  left: 3px;
+  right: 80px;
+  opacity: 0;
+}
+.pic1 .btn:hover {
+  background-color: transparent;
+  position: absolute;
+  border: white;
+  border-style: solid;
+  height: 90px;
+  width: 70px;
+  border-width: 1px;
+  text-align: center;
+  float: right;
+  top: -5px;
+  left: -10px;
+  opacity: 1;
+}
+.pic2 .btn2 {
+  background-color: #4caf50;
+  position: absolute;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  float: right;
+  top: 0px;
+  left: 5px;
+  right: 80px;
+  opacity: 0;
+}
+.pic2 .btn2:hover {
+  background-color: transparent;
+  position: absolute;
+  border: white;
+  border-style: solid;
+  height: 90px;
+  width: 90px;
+  border-width: 1px;
+  text-align: center;
+  float: right;
+  top: -5px;
+  left: -10px;
+  opacity: 1;
+}
+.pic3 .btn3 {
+  background-color: #4caf50;
+  position: absolute;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  float: right;
+  top: 0px;
+  left: 5px;
+  right: 80px;
+  opacity: 0;
+}
+.pic3 .btn3:hover {
+  background-color: transparent;
+  position: absolute;
+  border: white;
+  border-style: solid;
+  height: 90px;
+  width: 90px;
+  border-width: 1px;
+  text-align: center;
+  float: right;
+  top: -5px;
+  left: -10px;
+  opacity: 1;
+}
+.pic4 .btn4 {
+  background-color: #4caf50;
+  position: absolute;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  float: right;
+  top: 0px;
+  left: 5px;
+  right: 80px;
+  opacity: 0;
+}
+
+.pic4 .btn4:hover {
+  background-color: transparent;
+  position: absolute;
+  border: white;
+  border-style: solid;
+  height: 90px;
+  width: 90px;
+  border-width: 1px;
+  text-align: center;
+  float: right;
+  top: 0px;
+  left: -10px;
+  opacity: 1;
+}
+
 content:hover {
   content: "";
   background-color: white;
@@ -132,9 +257,11 @@ content:hover {
   /* background-image: url("./random.jpeg"); */
   /* background-size: 51.5% 100%; */
   /* background-repeat: repeat-y; */
-  padding-top: 100px;
+  padding-top: 60px;
+  padding-left: 30px;
   text-align: center;
   text-transform: uppercase;
+  font-family: "Bebas Neue";
   font-weight: 600;
   font-size: 4em;
   letter-spacing: 2.15rem;
@@ -146,9 +273,11 @@ content:hover {
   /* background-image: url("./random.jpeg"); */
   /* background-size: 51.5% 100%; */
   /* background-repeat: repeat-y; */
-  padding-top: 1%;
+  padding-top: 0%;
+  padding-left: 35px;
   text-align: center;
   text-transform: uppercase;
+  font-family: "Bebas Neue";
   font-weight: 600;
   font-size: 4em;
   letter-spacing: 2.15rem;
@@ -181,3 +310,4 @@ label {
 #result {
   color: #000;
 }
+
