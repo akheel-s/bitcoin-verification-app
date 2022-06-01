@@ -1,1 +1,3 @@
 Safe Crypto is a one-stop-shop where you can verify your transactions to see if they are ransomware free, get correct filtered information/News on Crypto (Especially Bitcoin), get recommended sources to learn how to trade, and lastly, get recommended the best in class brokers in the markets to trade your cryptocurrency. The user inputs the bitcoin address the bitcoins were sent to, the date of the transaction, and the amount sent. The model takes these inputs and predicts if the transaction was ransomware or not. The icons on the sidebar are what we call the "Information & Resources Field", where the user can get the latest information and resources on bitcoin.
+
+Made by: Bharadwaj Satyanarayana, Akheel Shaik, Rohit Vemuri
